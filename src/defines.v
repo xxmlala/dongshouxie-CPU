@@ -21,6 +21,8 @@
 
 //AluOp
 `define EXE_OR_OP       8'b00100101
+`define EXE_ORI_OP      8'b01011010
+
 `define EXE_NOP_OP      8'b00000000
 
 //AluSel
@@ -40,5 +42,5 @@
 `define DoubleRegWidth  64
 `define DoubleRegBus    63:0
 `define RegNum          32
-`define RegNumLof2      5
+`define RegNumLog2      5
 `define NOPRegAddr      5'b00000

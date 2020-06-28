@@ -1,4 +1,4 @@
-`include defines.v
+`include "defines.v"
 
 module id_ex(
     input wire clk,
@@ -26,7 +26,7 @@ always @(posedge clk) begin
         ex_alusel <= `EXE_RES_NOP;
         ex_reg1 <= `ZeroWord;
         ex_reg2 <= `ZeroWord;
-        ex_wd <= `NIPRegAddr;
+        ex_wd <= `NOPRegAddr;
         ex_wreg <= `WriteDisable;
     end else begin
         ex_aluop <= id_aluop;

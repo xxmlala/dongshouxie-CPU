@@ -1,6 +1,6 @@
-`include defines.v
+`include "defines.v"
 
-module(
+module ex(
     input wire rst,
 
     input wire[`AluOpBus] aluop_i,
@@ -45,4 +45,4 @@ always @(*) begin
     endcase
 end
 
-module
+endmodule

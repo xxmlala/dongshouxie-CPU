@@ -5,7 +5,7 @@ module if_id(
     input wire rst,
     
     input wire[`InstAddrBus] if_pc,
-    input wire[`instBus] if_inst,
+    input wire[`InstBus] if_inst,
 
     output reg[`InstAddrBus] id_pc,
     output reg[`InstBus] id_inst

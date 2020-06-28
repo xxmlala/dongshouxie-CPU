@@ -11,7 +11,7 @@ module id(
     output reg reg1_read_o,
     output reg reg2_read_o,
     output reg[`RegAddrBus] reg1_addr_o,
-    output reg[`RegAddrBus] reg2_addr_o;
+    output reg[`RegAddrBus] reg2_addr_o,
 
     output reg[`AluOpBus] aluop_o,
     output reg[`AluSelBus] alusel_o,
@@ -61,7 +61,7 @@ always @(*) begin
                 alusel_o <= `EXE_RES_LOGIC;
                 reg1_read_o <= 1'b1;
                 reg2_read_o <= 1'b0;
-                imm <= {16'h0, inst[15:0]};
+                imm <= {16'h0, inst_i[15:0]};
                 wd_o <= inst_i[20:16];
                 instvalid <= `InstValid;
             end
@@ -98,4 +98,4 @@ always @(*) begin
     end
 end
 
-endmodule;
+endmodule
