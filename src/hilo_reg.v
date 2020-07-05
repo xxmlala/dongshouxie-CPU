@@ -3,11 +3,11 @@ module hilo_reg(
     input wire rst,
 
     input wire we,
-    input wire hi_i,
-    input wire lo_i,
+    input wire[`RegBus] hi_i,
+    input wire[`RegBus] lo_i,
 
     output reg[`RegBus] hi_o,
-    output reg[`RegBus] lo_o,
+    output reg[`RegBus] lo_o
 );
 
 always @(posedge clk) begin
